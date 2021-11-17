@@ -7,7 +7,6 @@ router.post(`/accountTypeChecker`, (req, res) => {
     let message = accountType === 'A' ? 
     "The account in which the balance amount decreases by varying amounts each month." 
     : "The account in which the balance amount changes by the same amount each month."
-    console.log({"AccountType": accountType, "message": message});
     res.send({"AccountType": accountType, "message": message});
 });
 
