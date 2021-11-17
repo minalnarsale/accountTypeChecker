@@ -1,5 +1,5 @@
 const express = require(`express`);
-const routes = require(`./routes`);
+const router = require(`./routes`).router;
 
 let app = express();
 
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 });
 
 //defining routes for API
-app.use('/', routes);
+app.use('/', router);
 
 //routes get execut in order so `/*` route is at last 
 app.get('/*', (req, res) => {
